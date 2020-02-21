@@ -6,8 +6,8 @@ mkdir -p ~/.config/nvim
 
 # Install nvim (and its dependencies: pip3, git), Python 3 and ctags (for tagbar)
 echo '[*] App installing Neovim and its dependencies (Python 3 and git), and dependencies for tagbar (exuberant-ctags) ...'
-sudo apt update
-sudo apt install neovim python3 python3-pip git curl exuberant-ctags -y
+#sudo apt update
+#sudo apt install neovim python3 python3-pip git curl exuberant-ctags -y
 
 # Install virtualenv to containerize dependencies
 echo '[*] Pip installing virtualenv to containerize Neovim dependencies (instead of installing them onto your system) ...'
@@ -17,7 +17,7 @@ python3 -m virtualenv -p python3 ~/.config/nvim/env
 # Install pip modules for Neovim within the virtual environment created
 echo '[*] Activating virtualenv and pip installing Neovim (for Python plugin support), libraries for async autocompletion support (jedi, psutil, setproctitle), and library for pep8-style formatting (yapf) ...'
 source ~/.config/nvim/env/bin/activate
-pip install neovim==0.2.6 jedi psutil setproctitle yapf
+pip install neovim==0.2.6 jedi psutil setproctitle yapf pynvim
 deactivate
 
 # Install vim-plug plugin manager
@@ -29,8 +29,8 @@ echo "[*] Downloading patch font into ~/.local/share/fonts ..."
 curl -fLo ~/.fonts/Iosevka\ Term\ Nerd\ Font\ Complete.ttf --create-dirs https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Iosevka/Regular/complete/Iosevka%20Term%20Nerd%20Font%20Complete.ttf
 
 # (Optional) Alias vim -> nvim
-echo '[*] Aliasing vim -> nvim, remember to source ~/.bashrc ...'
-echo "alias vim='nvim'" >> ~/.bashrc
+#echo '[*] Aliasing vim -> nvim, remember to source ~/.bashrc ...'
+#echo "alias vim='nvim'" >> ~/.bashrc
 
 # Enter Neovim and install plugins using a temporary init.vim, which avoids warnings about missing colorschemes, functions, etc
 echo -e '[*] Running :PlugInstall within nvim ...'

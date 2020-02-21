@@ -234,3 +234,40 @@ nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
 
+" My custom mappings 
+set relativenumber
+inoremap jk <ESC>
+nnoremap <Leader>.f :Files<CR>
+nnoremap <Leader>.l :Lines<CR>
+nnoremap <Leader>.t :Tags<CR>
+nnoremap <Leader>.b :Buffers<CR>
+nnoremap <Leader>.c :Commands<CR>
+nnoremap <Leader>.w :Windows<CR>
+nnoremap <Leader>.a :Ag<CR>
+nnoremap <Leader>.g :GitFiles<CR>
+nnoremap <Leader>.o :Locate<Space>
+nnoremap <Leader>.m :Maps<CR>
+nnoremap <Leader>.h :History<CR>
+nnoremap <Leader>.s :Snippets<CR>
+nnoremap <Leader>.i :Commits<CR>
+nnoremap <Leader>.r :History:<CR>
+nnoremap <Leader>.e :Helptags<CR>
+nnoremap <Leader>..c :BCommits<CR>
+nnoremap <Leader>..t :BTags<CR>
+nnoremap <Leader>..l :BLines<CR>
+
+nnoremap <Leader>nf :NERDTreeFind<CR>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gw :Gwrite<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+
+"set termguicolors
+"let g:dracula_colorterm = 0
+
+" "Zoom" a split window into a tab and/or close it
+nmap <Leader>zo :tabnew %<CR>
+nmap <Leader>zc :tabclose<CR>
+
+" Notes
+" Resize horizontically 40<ctrl-w>|
+" 
